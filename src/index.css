@@ -8,7 +8,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     font-family: 'Inter', system-ui, sans-serif;
   }
@@ -18,24 +18,329 @@
   .section-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
-  
+
   .container-max {
     @apply max-w-7xl mx-auto;
   }
-  
+
+  /* Apple Liquid Glass Buttons */
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 inline-flex items-center gap-2;
+    @apply relative font-medium py-3 px-8 rounded-full transition-all duration-300 inline-flex items-center gap-2 overflow-hidden;
+    background: rgba(37, 99, 235, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(37, 99, 235, 0.9);
+    box-shadow:
+      0 8px 32px 0 rgba(37, 99, 235, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+    color: white;
   }
-  
+
+  .dark .btn-primary {
+    background: rgba(96, 165, 250, 0.8);
+    color: white;
+    border: 1px solid rgba(96, 165, 250, 0.9);
+  }
+
+  .btn-primary:hover {
+    background: rgb(37, 99, 235);
+    border-color: rgb(37, 99, 235);
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 40px 0 rgba(37, 99, 235, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .dark .btn-primary:hover {
+    background: rgb(96, 165, 250);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
   .btn-secondary {
-    @apply border-2 border-primary-600 dark:border-primary-400 text-primary-600 dark:text-primary-400 hover:bg-primary-600 dark:hover:bg-primary-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 inline-flex items-center gap-2;
+    @apply relative font-medium py-3 px-8 rounded-full transition-all duration-300 inline-flex items-center gap-2 overflow-hidden;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(37, 99, 235, 0.25);
+    box-shadow:
+      0 8px 32px 0 rgba(31, 38, 135, 0.1),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+    color: rgb(37, 99, 235);
   }
-  
+
+  .dark .btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgba(96, 165, 250, 0.25);
+    color: rgb(96, 165, 250);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 40px 0 rgba(37, 99, 235, 0.2),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  }
+
+  .dark .btn-secondary:hover {
+    background: rgba(96, 165, 250, 0.15);
+    border-color: rgba(96, 165, 250, 0.4);
+  }
+
+  .btn-secondary:active {
+    transform: translateY(0);
+  }
+
   .card {
     @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/20 transition-all duration-300;
   }
-  
+
   .gradient-text {
     @apply bg-gradient-to-r from-primary-600 to-blue-600 dark:from-primary-400 dark:to-blue-400 bg-clip-text text-transparent;
+  }
+
+  /* Grid pattern background */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+@layer utilities {
+
+  /* Animated gradient background */
+  @keyframes gradient-shift {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  /* Floating particles animation */
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(-100vh) translateX(50px);
+      opacity: 0;
+    }
+  }
+
+  .animate-float {
+    animation-name: float;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  /* Fade in up animation */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  /* Animation delays */
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+    opacity: 0;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+    opacity: 0;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+    opacity: 0;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1s;
+    opacity: 0;
+  }
+
+  /* Slower bounce animation */
+  @keyframes bounce-slow {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+  }
+
+  /* Shimmer effect for liquid glass */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+  }
+
+  .btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Slide in from right animation */
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.4s ease-out forwards;
+  }
+
+  /* Twinkle animation for stars */
+  @keyframes twinkle {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  .animate-twinkle {
+    animation: twinkle 3.5s ease-in-out infinite;
+  }
+
+  /* Rain animation */
+  @keyframes rain {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  .animate-rain {
+    animation: rain linear infinite;
+  }
+
+  /* Realistic rain animation - Apple Weather style */
+  @keyframes realistic-rain {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    95% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(calc(100vh + 100px));
+      opacity: 0;
+    }
+  }
+
+  .animate-realistic-rain {
+    animation: realistic-rain linear infinite;
+  }
+
+  /* Water ripple cursor effect */
+  /* Raindrop trail cursor effect */
+  @keyframes raindrop-fall {
+    0% {
+      transform: translateY(0) scaleY(1);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: translateY(100px) scaleY(1.5);
+      opacity: 0;
+    }
+  }
+
+  .animate-raindrop-fall {
+    animation: raindrop-fall 1.5s ease-in forwards;
   }
 }

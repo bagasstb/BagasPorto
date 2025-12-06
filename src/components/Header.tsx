@@ -23,17 +23,16 @@ const Header = () => {
   ]
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg' 
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg'
         : 'bg-transparent'
-    }`}>
+      }`}>
       <nav className="container-max section-padding">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-xl font-bold gradient-text">
-            Satrio Bagaskoro
+            Hello 👋
           </a>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
