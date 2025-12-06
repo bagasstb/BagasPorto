@@ -1,39 +1,80 @@
+import { SiSwift, SiXcode, SiApple, SiFirebase, SiGithub, SiCocoapods, SiAppstore, SiMapbox, SiTestinglibrary, SiApollographql, SiGooglemaps, SiJenkins, SiCircleci } from "react-icons/si";
+import { FaCheckCircle, FaSnapchatGhost, FaRegEye, FaStream, FaFan } from "react-icons/fa";
+import { GiSnake, GiAstronautHelmet } from "react-icons/gi";
+
 const Skills = () => {
   const skillCategories = [
     {
       title: "iOS Development",
       skills: [
-        { name: "Swift", level: 95 },
-        { name: "SwiftUI", level: 90 },
-        { name: "UIKit", level: 85 },
-        { name: "Xcode", level: 90 },
-        { name: "Core Data", level: 80 },
-        { name: "Combine", level: 75 }
+        { name: "Swift" },
+        { name: "SwiftUI" },
+        { name: "UIKit" },
+        { name: "Xcode" },
+        { name: "Core Data" },
+        { name: "XCTest" },
+        { name: "Swift Testing" },
+        { name: "UI Test" }
       ]
     },
     {
-      title: "Apple Frameworks",
+      title: "Frameworks",
       skills: [
-        { name: "Foundation", level: 90 },
-        { name: "AVFoundation", level: 75 },
-        { name: "Core Animation", level: 80 },
-        { name: "MapKit", level: 70 },
-        { name: "CloudKit", level: 65 },
-        { name: "Core Location", level: 80 }
+        { name: "Foundation" },
+        { name: "AVFoundation" },
+        { name: "Core Animation" },
+        { name: "In-App Purchase" },
+        { name: "Google Maps API" },
+        { name: "Snapkit" },
+        { name: "Core Location" },
+        { name: "Midtrans" },
+        { name: "RxSwift" }
       ]
     },
     {
       title: "Tools & Technologies",
       skills: [
-        { name: "Git", level: 90 },
-        { name: "RESTful APIs", level: 85 },
-        { name: "Firebase", level: 75 },
-        { name: "TestFlight", level: 85 },
-        { name: "App Store Connect", level: 80 },
-        { name: "CocoaPods/SPM", level: 75 }
+        { name: "Git" },
+        { name: "RESTful APIs" },
+        { name: "Firebase" },
+        { name: "TestFlight" },
+        { name: "App Store Connect" },
+        { name: "CocoaPods/SPM" },
+        { name: "Jenkins" },
+        { name: "Proxyman" },
+        { name: "CircleCi" }
       ]
     }
   ]
+
+  const skillIconMap: { [key: string]: JSX.Element | undefined } = {
+    "CircleCi": <SiCircleci className="w-5 h-5 mr-2 text-black dark:text-white" />, 
+    "Proxyman": <GiAstronautHelmet className="w-5 h-5 mr-2 text-teal-500" />, 
+    "Swift": <SiSwift className="w-5 h-5 mr-2 text-orange-500" />,
+    "SwiftUI": <SiSwift className="w-5 h-5 mr-2 text-blue-500" />,
+    "UIKit": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
+    "Xcode": <SiXcode className="w-5 h-5 mr-2 text-blue-700" />,
+    "Core Data": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
+    "Foundation": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
+    "AVFoundation": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
+    "Core Animation": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
+    "Google Maps API": <SiGooglemaps className="w-5 h-5 mr-2 text-green-600" />,
+    "Snapkit": <FaSnapchatGhost className="w-5 h-5 mr-2 text-yellow-500" />,
+    "Core Location": <SiMapbox className="w-5 h-5 mr-2 text-green-600" />,
+    "Git": <SiGithub className="w-5 h-5 mr-2 text-black dark:text-white" />,
+    "RESTful APIs": <SiApollographql className="w-5 h-5 mr-2 text-purple-600" />,
+    "Firebase": <SiFirebase className="w-5 h-5 mr-2 text-yellow-500" />,
+    "TestFlight": <FaFan className="w-5 h-5 mr-2 text-blue-400" />, 
+    "App Store Connect": <SiAppstore className="w-5 h-5 mr-2 text-blue-600" />,
+    "CocoaPods/SPM": <SiCocoapods className="w-5 h-5 mr-2 text-red-500" />,
+    "Jenkins": <SiJenkins className="w-5 h-5 mr-2 text-red-600" />,
+    "XCTest": <FaCheckCircle className="w-5 h-5 mr-2 text-green-500" />,
+    "Swift Testing": <FaCheckCircle className="w-5 h-5 mr-2 text-blue-500" />,
+    "In-App Purchase": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
+    "UI Test": <FaRegEye className="w-5 h-5 mr-2 text-indigo-500" />,
+    "RxSwift": <GiSnake className="w-5 h-5 mr-2 text-red-500" />,
+    "Midtrans": <FaStream className="w-5 h-5 mr-2 text-blue-600" />
+  }
 
   return (
     <section id="skills" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
@@ -55,20 +96,15 @@ const Skills = () => {
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 text-center transition-colors duration-300">
                   {category.title}
                 </h3>
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2 justify-center">
                   {category.skills.map((skill, idx) => (
-                    <div key={idx}>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-700 dark:text-gray-300 font-medium transition-colors duration-300">{skill.name}</span>
-                        <span className="text-primary-600 dark:text-primary-400 text-sm font-medium transition-colors duration-300">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 transition-colors duration-300">
-                        <div
-                          className="bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-400 dark:to-primary-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
+                    <span
+                      key={idx}
+                      className="flex items-center px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-xs rounded-full font-medium transition-colors duration-300 border border-primary-200 dark:border-primary-800"
+                    >
+                      {skillIconMap[skill.name] ?? null}
+                      {skill.name}
+                    </span>
                   ))}
                 </div>
               </div>

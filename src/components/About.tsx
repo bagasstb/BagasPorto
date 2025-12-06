@@ -33,18 +33,19 @@ const About = () => {
               About Me
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
-              Passionate iOS developer with expertise in Swift, SwiftUI, and UIKit, 
+              Passionate iOS developer with expertise in Swift, SwiftUI, and UIKit,
               committed to creating exceptional mobile experiences for Apple platforms.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <div className="rounded-lg shadow-lg w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center transition-colors duration-300">
-                <div className="text-center">
-                  <Code className="w-16 h-16 text-primary-600 dark:text-primary-400 mx-auto mb-4 transition-colors duration-300" />
-                  <p className="text-gray-600 dark:text-gray-300 font-medium transition-colors duration-300">Building iOS Apps</p>
-                </div>
+              <div className="rounded-lg shadow-lg w-full h-96 overflow-hidden">
+                <img
+                  src="/profile-photo.jpg"
+                  alt="Satrio Bagaskoro with team"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div>
@@ -52,13 +53,13 @@ const About = () => {
                 My Journey
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-300">
-                As a dedicated iOS developer, I specialize in building native iOS applications 
-                using Swift and SwiftUI. My experience spans across the entire iOS development 
+                As a dedicated iOS developer, I specialize in building native iOS applications
+                using Swift and SwiftUI. My experience spans across the entire iOS development
                 lifecycle, from concept to App Store deployment.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
-                I'm passionate about staying up-to-date with the latest iOS technologies, 
-                Apple's Human Interface Guidelines, and continuously improving my skills 
+                I'm passionate about staying up-to-date with the latest iOS technologies,
+                Apple's Human Interface Guidelines, and continuously improving my skills
                 to deliver high-quality mobile applications.
               </p>
               <a

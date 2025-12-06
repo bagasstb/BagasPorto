@@ -1,11 +1,11 @@
-import { ExternalLink, Github, Calendar, Code, Database } from 'lucide-react'
+import { ExternalLink, Calendar } from 'lucide-react'
 
 const Projects = () => {
   const projects = [
     {
       title: "TIX.ID",
       description: "TIX.ID is entertainment application that provides movie and event ticket booking services. It allows users to browse movies, check schedules, book tickets, and manage their bookings. The app also features a user-friendly interface, secure payment options, and personalized recommendations based on user preferences.",
-      icon:<img src="https://asset.tix.id/wp-content/uploads/2024/07/7289a31a-b446-44a1-b75d-93c300ee7173.webp" alt="TIXID Logo" className="w-full h-full object-contain rounded-lg shadow" />,
+      icon: <img src="https://asset.tix.id/wp-content/uploads/2024/07/7289a31a-b446-44a1-b75d-93c300ee7173.webp" alt="TIXID Logo" className="w-full h-full object-contain rounded-lg shadow" />,
       technologies: ["SwiftUI", "Core Data", "CloudKit", "Combine", "UserNotifications"],
       liveUrl: "https://apps.apple.com/id/app/tix-id/id1362497752",
       date: "2024"
@@ -19,22 +19,12 @@ const Projects = () => {
       date: "2022"
     },
     {
-      title: "Fitness Tracker",
-      description: "A health and fitness tracking app that integrates with HealthKit to monitor workouts, steps, and health metrics with beautiful data visualizations.",
-      icon: <Database className="w-12 h-12" />,
-      technologies: ["SwiftUI", "HealthKit", "Charts", "Core Data", "WatchKit"],
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "Jalan Kita 2.0",
+      description: "Jalan Kita 2.0 merupakan aplikasi layanan masyarakat dari Kementrian PUPR yang berfungsi sebagai pusat aduan dan layanan aspirasi masyarakaDengan Jalan Kita 2.0, Anda bisa melaporkan kejadian permasalahan yang ada disekitar, diantaranya adalah: jalan rusak, banjir, jembatan roboh, atau bencana lainnya dapat Anda laporkan. Jalan Kita 2.0 juga menjadi portal penghubung antara masyarakat dengan Kementrian PUPR, dimana permasalahan sekitar dapat segera diatasi oleh pemerintah dengan tepat dan sigap.",
+      icon: <img src="https://jalankita.binamarga.pu.go.id/img/feedjaki.png" alt="Jalan Kita Logo" className="w-full h-full object-contain rounded-lg shadow" />,
+      technologies: ["UIKit", "Google Maps", "Google Maps Route", "Midtrans", "Alamofire"],
+      liveUrl: "https://apps.apple.com/id/app/jalan-kita-2-0/id1600748345",
       date: "2023"
-    },
-    {
-      title: "Recipe Finder",
-      description: "A recipe discovery app with ingredient-based search, meal planning, and shopping list features. Built with modern iOS architecture patterns.",
-      icon: <Code className="w-12 h-12" />,
-      technologies: ["SwiftUI", "Combine", "Core Data", "Vision", "Camera"],
-      liveUrl: "#",
-      githubUrl: "#",
-      date: "2024"
     }
   ]
 
@@ -47,7 +37,7 @@ const Projects = () => {
               Featured iOS Apps
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
-              A showcase of my recent iOS applications, demonstrating my skills in 
+              A showcase of my recent iOS applications, demonstrating my skills in
               Swift, SwiftUI, and modern iOS development practices.
             </p>
           </div>
@@ -66,7 +56,7 @@ const Projects = () => {
                     {project.date}
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 transition-colors duration-300">
                     {project.title}
@@ -74,7 +64,7 @@ const Projects = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 transition-colors duration-300">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, idx) => (
                       <span
@@ -85,7 +75,7 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-4">
                     <a
                       href={project.liveUrl}
@@ -94,17 +84,6 @@ const Projects = () => {
                       <ExternalLink size={16} />
                       App Store
                     </a>
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 font-medium transition-colors duration-200"
-                      >
-                        <Github size={16} />
-                        Source Code
-                      </a>
-                    )}
                   </div>
                 </div>
               </div>
