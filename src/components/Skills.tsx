@@ -1,4 +1,4 @@
-import { SiSwift, SiXcode, SiApple, SiFirebase, SiGithub, SiCocoapods, SiAppstore, SiMapbox, SiTestinglibrary, SiApollographql, SiGooglemaps, SiJenkins, SiCircleci } from "react-icons/si";
+import { SiSwift, SiXcode, SiApple, SiFirebase, SiGithub, SiCocoapods, SiAppstore, SiMapbox, SiApollographql, SiGooglemaps, SiJenkins, SiCircleci } from "react-icons/si";
 import { FaCheckCircle, FaSnapchatGhost, FaRegEye, FaStream, FaFan } from "react-icons/fa";
 import { GiSnake, GiAstronautHelmet } from "react-icons/gi";
 
@@ -48,8 +48,8 @@ const Skills = () => {
   ]
 
   const skillIconMap: { [key: string]: JSX.Element | undefined } = {
-    "CircleCi": <SiCircleci className="w-5 h-5 mr-2 text-black dark:text-white" />, 
-    "Proxyman": <GiAstronautHelmet className="w-5 h-5 mr-2 text-teal-500" />, 
+    "CircleCi": <SiCircleci className="w-5 h-5 mr-2 text-black dark:text-white" />,
+    "Proxyman": <GiAstronautHelmet className="w-5 h-5 mr-2 text-teal-500" />,
     "Swift": <SiSwift className="w-5 h-5 mr-2 text-orange-500" />,
     "SwiftUI": <SiSwift className="w-5 h-5 mr-2 text-blue-500" />,
     "UIKit": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
@@ -64,7 +64,7 @@ const Skills = () => {
     "Git": <SiGithub className="w-5 h-5 mr-2 text-black dark:text-white" />,
     "RESTful APIs": <SiApollographql className="w-5 h-5 mr-2 text-purple-600" />,
     "Firebase": <SiFirebase className="w-5 h-5 mr-2 text-yellow-500" />,
-    "TestFlight": <FaFan className="w-5 h-5 mr-2 text-blue-400" />, 
+    "TestFlight": <FaFan className="w-5 h-5 mr-2 text-blue-400" />,
     "App Store Connect": <SiAppstore className="w-5 h-5 mr-2 text-blue-600" />,
     "CocoaPods/SPM": <SiCocoapods className="w-5 h-5 mr-2 text-red-500" />,
     "Jenkins": <SiJenkins className="w-5 h-5 mr-2 text-red-600" />,
@@ -85,7 +85,7 @@ const Skills = () => {
               Skills & Technologies
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
-              A comprehensive overview of my iOS development skills and proficiency levels 
+              A comprehensive overview of my iOS development skills and proficiency levels
               across various Apple technologies and frameworks.
             </p>
           </div>
