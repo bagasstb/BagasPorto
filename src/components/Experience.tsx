@@ -97,11 +97,10 @@ const Experience = () => {
       location: "Jakarta, Indonesia",
       period: "Feb 2017 - Jul 2017",
       description: [
-        "Develop and maintain TIX.ID iOS app using Swift and modern iOS frameworks",
-        "Collaborate with design and product teams to implement user-friendly interfaces",
-        "Develop TIX Food feature from scratch until release to production",
-        "Conduct code reviews to ensure code quality and best practices",
-        "Work with cross-functional teams to deliver high-quality mobile experiences"
+        "Improved Sistem Informasi Pengadaan (SIPA) at LIPI",
+        "Created approval workflow system for procurement processes",
+        "Implemented PDF download and document printing features",
+        "Developed complex form input functionality for data entry"
       ]
     }
   ]
@@ -207,7 +206,7 @@ const Experience = () => {
         </div>
       </section>
 
-      <section id="projects" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+      <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="container-max section-padding">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
