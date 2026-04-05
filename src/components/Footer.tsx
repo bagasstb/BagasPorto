@@ -4,16 +4,16 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-white py-12 transition-colors duration-300">
+    <footer className="bg-background border-t border-white/5 text-white py-12 relative z-10">
       <div className="container-max section-padding">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
             {/* Brand */}
             <div>
-              <h3 className="text-xl font-bold mb-4 gradient-text">
+              <h3 className="text-2xl font-bold mb-4 text-white tracking-tight">
                 Satrio Bagaskoro
               </h3>
-              <p className="text-gray-400 dark:text-gray-500 mb-4 transition-colors duration-300">
+              <p className="text-gray-400 mb-6 font-light leading-relaxed">
                 iOS Developer passionate about creating exceptional mobile experiences 
                 and building beautiful, intuitive applications for Apple platforms.
               </p>
@@ -22,53 +22,53 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/satrio-teleng-bagaskoro-077473126"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 dark:text-gray-500 hover:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200"
+                  className="flex items-center justify-center w-10 h-10 bg-white/5 border border-white/10 text-gray-400 rounded-full hover:text-white hover:border-white/20 hover:bg-white/10 transition-all duration-300 "
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={18} />
                 </a>
                 <a
                   href="https://github.com/bagasstb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 dark:text-gray-500 hover:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200"
+                  className="flex items-center justify-center w-10 h-10 bg-white/5 border border-white/10 text-gray-400 rounded-full hover:text-white hover:border-white/20 hover:bg-white/10 transition-all duration-300"
                 >
-                  <Github size={20} />
+                  <Github size={18} />
                 </a>
                 <a
                   href="mailto:satrio.bagaskoro@email.com"
-                  className="text-gray-400 dark:text-gray-500 hover:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200"
+                  className="flex items-center justify-center w-10 h-10 bg-white/5 border border-white/10 text-gray-400 rounded-full hover:text-white hover:border-white/20 hover:bg-white/10 transition-all duration-300"
                 >
-                  <Mail size={20} />
+                  <Mail size={18} />
                 </a>
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
+              <h4 className="text-lg font-semibold mb-6 text-white tracking-wide">Quick Links</h4>
+              <ul className="space-y-3">
                 <li>
-                  <a href="#about" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors duration-200">
+                  <a href="#about" className="text-gray-400 font-light hover:text-white hover:translate-x-1 inline-block transition-all duration-300">
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#experience" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors duration-200">
+                  <a href="#experience" className="text-gray-400 font-light hover:text-white hover:translate-x-1 inline-block transition-all duration-300">
                     Experience
                   </a>
                 </li>
                 <li>
-                  <a href="#skills" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors duration-200">
+                  <a href="#skills" className="text-gray-400 font-light hover:text-white hover:translate-x-1 inline-block transition-all duration-300">
                     Skills
                   </a>
                 </li>
                 <li>
-                  <a href="#projects" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors duration-200">
+                  <a href="#projects" className="text-gray-400 font-light hover:text-white hover:translate-x-1 inline-block transition-all duration-300">
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors duration-200">
+                  <a href="#contact" className="text-gray-400 font-light hover:text-white hover:translate-x-1 inline-block transition-all duration-300">
                     Contact
                   </a>
                 </li>
@@ -77,21 +77,21 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
-              <div className="space-y-2 text-gray-400 dark:text-gray-500 transition-colors duration-300">
+              <h4 className="text-lg font-semibold mb-6 text-white tracking-wide">Get In Touch</h4>
+              <div className="space-y-3 text-gray-400 font-light">
                 <p>Bogor, Indonesia</p>
                 <p>bagasstb@gmail.com</p>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-gray-800 dark:border-gray-700 pt-8 transition-colors duration-300">
+          <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 dark:text-gray-500 text-sm mb-4 md:mb-0 transition-colors duration-300">
+              <p className="text-gray-500 text-sm mb-4 md:mb-0 font-light">
                 © {currentYear} Satrio Teleng Bagaskoro. All rights reserved.
               </p>
-              <p className="text-gray-400 dark:text-gray-500 text-sm flex items-center transition-colors duration-300">
-                Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> using React & Tailwind CSS
+              <p className="text-gray-500 text-sm flex items-center font-light">
+                Made with <Heart className="w-4 h-4 mx-1.5 text-primary-500 animate-pulse" /> using React & Tailwind CSS
               </p>
             </div>
           </div>

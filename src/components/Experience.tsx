@@ -9,7 +9,7 @@ const Experience = () => {
       period: "Nov 22 - Present",
       sections: [
         {
-          title: "Feature:",
+          title: "Feature",
           items: [
             "Create share feature including share movie, attractions, events, and movie rating. Share platform including to Instagram story, Instagram Feed, Facebook Story, Facebook Feed, Tiktok Story, X, download share content feature, and share with native iOS share sheet.",
             "Create in-house shortlink feature to replace Firebase Dynamic Link.",
@@ -22,7 +22,7 @@ const Experience = () => {
           ]
         },
         {
-          title: "Improvement:",
+          title: "Improvement",
           items: [
             "Migrate from old project folder to Buildable Folder to solve conflict in .pbxproj file.",
             "Implement Swift Package Manager to modularize the project and eliminate dependency.",
@@ -30,7 +30,7 @@ const Experience = () => {
           ]
         },
         {
-          title: "Day to day:",
+          title: "Day to day",
           items: [
             "Do sprint task from Jira and submit PR to Github.",
             "Writing unit test using Swift Test.",
@@ -46,7 +46,7 @@ const Experience = () => {
       period: "Jun 2021 - Nov 2022",
       sections: [
         {
-          title: "Lead iOS Engineer:",
+          title: "Lead iOS Engineer",
           items: [
             "Manage list of OKR targets for 2022 every quarter",
             "Work closely with the product team to manage the design system",
@@ -55,7 +55,7 @@ const Experience = () => {
           ]
         },
         {
-          title: "iOS Engineer:",
+          title: "iOS Engineer",
           items: [
             "Develop and implement Karier.mu iOS App from scratch",
             "Create iOS project architecture such as resource management, reusable component, localization string, data model, and networking based on the module",
@@ -135,14 +135,14 @@ const Experience = () => {
 
   return (
     <>
-      <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <section id="experience" className="py-24 relative z-10 border-t border-white/5 bg-background/30 backdrop-blur-md">
         <div className="container-max section-padding">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
+            <div className="text-center mb-16 animate-fade-in-up">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                 Work Experience
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
                 My professional journey in iOS development, building innovative
                 mobile applications and growing expertise in Apple technologies.
               </p>
@@ -150,38 +150,38 @@ const Experience = () => {
 
             <div className="space-y-8">
               {experiences.map((exp, index) => (
-                <div key={index} className="card p-8">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                <div key={index} className="glass-card p-8 lg:p-10 hover:scale-[1.01] transition-transform duration-500 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8">
                     <div className="mb-4 md:mb-0">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-white mb-2">
                         {exp.company}
                       </h3>
-                      <div className="flex items-center text-primary-600 dark:text-primary-400 mb-2 transition-colors duration-300">
-                        <Laptop className="w-4 h-4 mr-2" />
-                        <span className="font-medium">{exp.title}</span>
+                      <div className="flex items-center text-primary-400 mb-3">
+                        <Laptop className="w-5 h-5 mr-2" />
+                        <span className="font-semibold tracking-wide">{exp.title}</span>
                       </div>
-                      <div className="flex items-center text-gray-600 dark:text-gray-400 text-sm transition-colors duration-300">
+                      <div className="flex items-center text-gray-400 text-sm">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
-                    <div className="flex items-center text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm transition-colors duration-300">
-                      <Calendar className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-gray-300 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-sm font-medium shadow-sm backdrop-blur-sm">
+                      <Calendar className="w-4 h-4 mr-2 text-gray-400" />
                       <span>{exp.period}</span>
                     </div>
                   </div>
 
                   {exp.sections ? (
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                       {exp.sections.map((section, sectionIdx) => (
                         <div key={sectionIdx}>
-                          <h4 className="text-md font-semibold text-gray-800 dark:text-gray-200 mb-3 transition-colors duration-300">
+                          <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4 opacity-80">
                             {section.title}
                           </h4>
-                          <ul className="space-y-2">
+                          <ul className="space-y-3">
                             {section.items.map((item, itemIdx) => (
-                              <li key={itemIdx} className="text-gray-600 dark:text-gray-300 flex items-start transition-colors duration-300">
-                                <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0 transition-colors duration-300"></span>
+                              <li key={itemIdx} className="text-gray-400 font-light text-[15px] leading-relaxed flex items-start">
+                                <span className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-2 mr-4 flex-shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.6)]"></span>
                                 {item}
                               </li>
                             ))}
@@ -190,10 +190,10 @@ const Experience = () => {
                       ))}
                     </div>
                   ) : (
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {exp.description?.map((item, idx) => (
-                        <li key={idx} className="text-gray-600 dark:text-gray-300 flex items-start transition-colors duration-300">
-                          <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0 transition-colors duration-300"></span>
+                        <li key={idx} className="text-gray-400 font-light text-[15px] leading-relaxed flex items-start">
+                          <span className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-2 mr-4 flex-shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.6)]"></span>
                           {item}
                         </li>
                       ))}
@@ -206,14 +206,14 @@ const Experience = () => {
         </div>
       </section>
 
-      <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <section id="projects" className="py-24 relative z-10">
         <div className="container-max section-padding">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
-                Project
+            <div className="text-center mb-16 animate-fade-in-up">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                Projects
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
                 Freelance and project-based work, delivering custom solutions
                 for various clients and organizations.
               </p>
@@ -221,34 +221,46 @@ const Experience = () => {
 
             <div className="space-y-8">
               {projects.map((exp, index) => (
-                <div key={index} className="card p-8">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                <div key={index} className="glass-card p-8 lg:p-10 hover:scale-[1.01] transition-transform duration-500 animate-fade-in-up">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8">
                     <div className="mb-4 md:mb-0">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-white mb-2">
                         {exp.company}
                       </h3>
-                      <div className="flex items-center text-primary-600 dark:text-primary-400 mb-2 transition-colors duration-300">
-                        <Laptop className="w-4 h-4 mr-2" />
-                        <span className="font-medium">{exp.title}</span>
+                      <div className="flex items-center text-primary-400 mb-3">
+                        <Laptop className="w-5 h-5 mr-2" />
+                        <span className="font-semibold tracking-wide">{exp.title}</span>
                       </div>
-                      <div className="flex items-center text-gray-600 dark:text-gray-400 text-sm transition-colors duration-300">
+                      <div className="flex items-center text-gray-400 text-sm">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
-                    <div className="flex items-center text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm transition-colors duration-300">
-                      <Calendar className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-gray-300 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-sm font-medium shadow-sm backdrop-blur-sm">
+                      <Calendar className="w-4 h-4 mr-2 text-gray-400" />
                       <span>{exp.period}</span>
                     </div>
                   </div>
 
-                  <ul className="space-y-2">
-                    {exp.description?.map((item, idx) => (
-                      <li key={idx} className="text-gray-600 dark:text-gray-300 flex items-start transition-colors duration-300">
-                        <span className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0 transition-colors duration-300"></span>
+                  <ul className="space-y-3">
+                    {exp.description?.map((item, idx) => {
+                      if (item.startsWith('Link:')) {
+                        const link = item.replace('Link: ', '');
+                        return (
+                          <li key={idx} className="text-primary-400 font-light text-[15px] leading-relaxed flex items-center mt-4">
+                            <a href={link} target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
+                              {link}
+                            </a>
+                          </li>
+                        )
+                      }
+                      return (
+                      <li key={idx} className="text-gray-400 font-light text-[15px] leading-relaxed flex items-start">
+                        <span className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-2 mr-4 flex-shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.6)]"></span>
                         {item}
                       </li>
-                    ))}
+                      )
+                    })}
                   </ul>
                 </div>
               ))}

@@ -48,43 +48,43 @@ const Skills = () => {
   ]
 
   const skillIconMap: { [key: string]: JSX.Element | undefined } = {
-    "CircleCi": <SiCircleci className="w-5 h-5 mr-2 text-black dark:text-white" />,
-    "Proxyman": <GiAstronautHelmet className="w-5 h-5 mr-2 text-teal-500" />,
+    "CircleCi": <SiCircleci className="w-5 h-5 mr-2 text-white" />,
+    "Proxyman": <GiAstronautHelmet className="w-5 h-5 mr-2 text-teal-400" />,
     "Swift": <SiSwift className="w-5 h-5 mr-2 text-orange-500" />,
     "SwiftUI": <SiSwift className="w-5 h-5 mr-2 text-blue-500" />,
-    "UIKit": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
-    "Xcode": <SiXcode className="w-5 h-5 mr-2 text-blue-700" />,
-    "Core Data": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
-    "Foundation": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
-    "AVFoundation": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
-    "Core Animation": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
-    "Google Maps API": <SiGooglemaps className="w-5 h-5 mr-2 text-green-600" />,
-    "Snapkit": <FaSnapchatGhost className="w-5 h-5 mr-2 text-yellow-500" />,
-    "Core Location": <SiMapbox className="w-5 h-5 mr-2 text-green-600" />,
-    "Git": <SiGithub className="w-5 h-5 mr-2 text-black dark:text-white" />,
-    "RESTful APIs": <SiApollographql className="w-5 h-5 mr-2 text-purple-600" />,
+    "UIKit": <SiApple className="w-5 h-5 mr-2 text-gray-300" />,
+    "Xcode": <SiXcode className="w-5 h-5 mr-2 text-blue-500" />,
+    "Core Data": <SiApple className="w-5 h-5 mr-2 text-gray-300" />,
+    "Foundation": <SiApple className="w-5 h-5 mr-2 text-gray-300" />,
+    "AVFoundation": <SiApple className="w-5 h-5 mr-2 text-gray-300" />,
+    "Core Animation": <SiApple className="w-5 h-5 mr-2 text-gray-300" />,
+    "Google Maps API": <SiGooglemaps className="w-5 h-5 mr-2 text-green-500" />,
+    "Snapkit": <FaSnapchatGhost className="w-5 h-5 mr-2 text-yellow-400" />,
+    "Core Location": <SiMapbox className="w-5 h-5 mr-2 text-green-500" />,
+    "Git": <SiGithub className="w-5 h-5 mr-2 text-white" />,
+    "RESTful APIs": <SiApollographql className="w-5 h-5 mr-2 text-purple-500" />,
     "Firebase": <SiFirebase className="w-5 h-5 mr-2 text-yellow-500" />,
     "TestFlight": <FaFan className="w-5 h-5 mr-2 text-blue-400" />,
-    "App Store Connect": <SiAppstore className="w-5 h-5 mr-2 text-blue-600" />,
+    "App Store Connect": <SiAppstore className="w-5 h-5 mr-2 text-blue-500" />,
     "CocoaPods/SPM": <SiCocoapods className="w-5 h-5 mr-2 text-red-500" />,
-    "Jenkins": <SiJenkins className="w-5 h-5 mr-2 text-red-600" />,
-    "XCTest": <FaCheckCircle className="w-5 h-5 mr-2 text-green-500" />,
-    "Swift Testing": <FaCheckCircle className="w-5 h-5 mr-2 text-blue-500" />,
-    "In-App Purchase": <SiApple className="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" />,
-    "UI Test": <FaRegEye className="w-5 h-5 mr-2 text-indigo-500" />,
-    "RxSwift": <GiSnake className="w-5 h-5 mr-2 text-red-500" />,
-    "Midtrans": <FaStream className="w-5 h-5 mr-2 text-blue-600" />
+    "Jenkins": <SiJenkins className="w-5 h-5 mr-2 text-red-500" />,
+    "XCTest": <FaCheckCircle className="w-5 h-5 mr-2 text-green-400" />,
+    "Swift Testing": <FaCheckCircle className="w-5 h-5 mr-2 text-blue-400" />,
+    "In-App Purchase": <SiApple className="w-5 h-5 mr-2 text-gray-300" />,
+    "UI Test": <FaRegEye className="w-5 h-5 mr-2 text-indigo-400" />,
+    "RxSwift": <GiSnake className="w-5 h-5 mr-2 text-red-400" />,
+    "Midtrans": <FaStream className="w-5 h-5 mr-2 text-blue-500" />
   }
 
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+    <section id="skills" className="py-24 relative z-10 border-t border-white/5 bg-background/20 backdrop-blur-sm">
       <div className="container-max section-padding">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               Skills & Technologies
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
               A comprehensive overview of my iOS development skills and proficiency levels
               across various Apple technologies and frameworks.
             </p>
@@ -92,15 +92,15 @@ const Skills = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => (
-              <div key={index} className="card p-8">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 text-center transition-colors duration-300">
+              <div key={index} className="glass-card p-8 lg:p-10 hover:scale-[1.02] transition-transform duration-500 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                <h3 className="text-2xl font-bold text-white mb-8 text-center text-opacity-90 tracking-wide">
                   {category.title}
                 </h3>
-                <div className="flex flex-wrap gap-2 justify-center">
+                <div className="flex flex-wrap gap-3 justify-center">
                   {category.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="flex items-center px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-xs rounded-full font-medium transition-colors duration-300 border border-primary-200 dark:border-primary-800"
+                      className="flex items-center px-4 py-2 bg-white/5 text-gray-200 text-sm rounded-full font-medium border border-white/10 shadow-sm hover:border-primary-500/50 hover:bg-primary-500/10 hover:text-white transition-all duration-300"
                     >
                       {skillIconMap[skill.name] ?? null}
                       {skill.name}

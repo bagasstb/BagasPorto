@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,12 +23,12 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg'
+        ? 'bg-background/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/5'
         : 'bg-transparent'
       }`}>
       <nav className="container-max section-padding">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-xl font-bold gradient-text">
+          <a href="#" className="text-xl font-bold text-white tracking-tight">
             Hello 👋
           </a>
 
@@ -39,19 +38,17 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-200"
+                className="text-gray-400 hover:text-white font-medium transition-colors duration-200"
               >
                 {item.label}
               </a>
             ))}
-            <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button and Theme Toggle */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
             <button
-              className="p-2 text-gray-700 dark:text-gray-300"
+              className="p-2 text-gray-300 hover:text-white transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -61,13 +58,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-white dark:bg-gray-900 shadow-lg border-t dark:border-gray-700">
+          <div className="md:hidden absolute top-16 left-0 w-full bg-background/95 backdrop-blur-xl shadow-lg border-t border-white/10">
             <div className="py-4 space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+                  className="block px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

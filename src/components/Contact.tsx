@@ -40,14 +40,14 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+    <section id="contact" className="py-24 relative z-10">
       <div className="container-max section-padding">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               Get In Touch
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
               I'm always open to discussing new iOS projects, interesting app ideas, 
               or just having a chat about mobile development and Apple technologies.
             </p>
@@ -55,26 +55,26 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
+            <div className="animate-fade-in-up animation-delay-200">
+              <h3 className="text-signup text-2xl font-bold text-white mb-6">
                 Let's Connect
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-8 transition-colors duration-300">
+              <p className="text-gray-400 mb-8 font-light leading-relaxed">
                 Feel free to reach out if you have any questions, want to collaborate 
                 on an iOS project, or just want to say hello. I'll get back to you as soon as possible!
               </p>
 
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-10">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg mr-4 transition-colors duration-300">
+                  <div key={index} className="flex items-center group">
+                    <div className="flex items-center justify-center w-14 h-14 bg-white/5 border border-white/10 text-primary-400 rounded-2xl mr-5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary-500/10">
                       {info.icon}
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900 dark:text-white transition-colors duration-300">{info.title}</h4>
+                      <h4 className="font-semibold text-white mb-1">{info.title}</h4>
                       <a
                         href={info.link}
-                        className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                        className="text-gray-400 font-light hover:text-primary-400 transition-colors duration-200"
                       >
                         {info.value}
                       </a>
@@ -83,32 +83,32 @@ const Contact = () => {
                 ))}
               </div>
 
-              <div className="flex space-x-4">
+              <div className="flex space-x-5">
                 <a
                   href="https://www.linkedin.com/in/satrio-teleng-bagaskoro-077473126"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 bg-primary-600 dark:bg-primary-500 text-white rounded-lg hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors duration-200"
+                  className="flex items-center justify-center w-14 h-14 bg-white/5 border border-white/10 text-gray-300 rounded-2xl hover:text-white hover:bg-white/10 hover:scale-110 transition-all duration-300"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={22} />
                 </a>
                 <a
                   href="https://github.com/bagasstb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors duration-200"
+                  className="flex items-center justify-center w-14 h-14 bg-white/5 border border-white/10 text-gray-300 rounded-2xl hover:text-white hover:bg-white/10 hover:scale-110 transition-all duration-300"
                 >
-                  <Github size={20} />
+                  <Github size={22} />
                 </a>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="card p-8">
+            <div className="glass-card p-10 animate-fade-in-up animation-delay-400">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Name
                     </label>
                     <input
@@ -118,12 +118,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-xl focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all duration-200 outline-none placeholder-gray-600"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email
                     </label>
                     <input
@@ -133,14 +133,14 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-xl focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all duration-200 outline-none placeholder-gray-600"
                       placeholder="your.email@example.com"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                     Subject
                   </label>
                   <input
@@ -150,13 +150,13 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-xl focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all duration-200 outline-none placeholder-gray-600"
                     placeholder="What's this about?"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message
                   </label>
                   <textarea
@@ -166,7 +166,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200 resize-none"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 text-white rounded-xl focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all duration-200 outline-none resize-none placeholder-gray-600"
                     placeholder="Tell me about your iOS project or just say hello!"
                   ></textarea>
                 </div>
